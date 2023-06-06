@@ -23,3 +23,12 @@ class HelloApiView(APIView):
         name = serializer.validated_data.get('name')
         message = f'Hello {name}!'
         return Response({'message': message})
+
+    def put(self, request, pk=None):
+        return Response({'method': 'PUT'})
+
+    def patch(self, request, pk=None):
+        return Response({'method': 'PATCH'})
+
+    def delete(self, request, pk=None):
+        return Response({'method': 'DELETE'})
