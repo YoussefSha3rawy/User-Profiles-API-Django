@@ -7,5 +7,5 @@ WORKDIR /server
 COPY . /server/
 RUN cd /server && ls -a 
 RUN pip install -r requirements.txt
-CMD ["python", "/server/manage.py", "makemigrations", "&&", "python", "/server/manage.py", "migrate", "&&" ,"python", "/server/manage.py", "runserver", "0.0.0.0:8000" ]
+CMD ["python", "/server/manage.py", "runserver", "0.0.0.0:8000" ]
 EXPOSE 8000
